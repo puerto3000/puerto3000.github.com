@@ -1,0 +1,20 @@
+---
+layout: default
+title: Puerto 3000
+---
+
+<div id="home">
+	<h1>Que es esto? o mejor dicho al estilo del <a href="http://images.memegenerator.net/instances/400x/9038072.jpg">tano pasman</a></h1>
+	<p>Puerto3000 es una iniciativa de crear un "espacio" colaborativo de programación por parte de un pequeño grupo de desarrolladores. Esta iniciativa nació básicamente porque casi siempre todos los recursos que hay en internet, pocas veces los encontramos en nuestra lengua nativa (el <a href="http://be-openminded.com/wp-content/uploads/Se_habla_espaniol_by_gerar2.png">español</a> yep!), entonces decidimos en que podíamos compartir recursos que ayudarían a otros. Otro gran problema es que mantener un blog es difícil (ya siendo sinceros, da pereza!), por lo tanto decidimos en hacerlo de tipo colaborativo de tal forma siempre encontraras algo nuevo por lo menos una vez al mes! (al menos eso esperamos!). Esta iniciativa no solo queremos que involucre un simple y común "blog" sino también el desarrollo de eventos y quizás futuros proyectos. Estas interesado? escribenos a puerto3000team@gmail.com </p>
+	
+	<h1>Por que el nombre de Puerto3000?</h1>
+	<p>La verdad es una representación de nuestra falta de imaginación y desesperación por encontrar un simple nombre!... Bueno, el origen se remonta a una tarde de chat en skype, y que alguien dijo "hey, porque no usamos el puerto que esta de moda en la mayoria de los frameworks?" y asi es como el nombre Puerto3000 nació... ya siendo justos no es un mal nombre! ;)</p>
+	
+	<h1>Entradas...</h1>
+	<ul class="posts">
+		{% for post in site.posts %}
+			<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+		{% endfor %}
+	</ul>
+
+</div>
