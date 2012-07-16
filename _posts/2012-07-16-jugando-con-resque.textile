@@ -1,0 +1,30 @@
+---
+layout: post
+title: Jugando con Resque
+---
+
+h1. {{ page.title }}
+
+Desde hace un par de semanas, he tenido la oportunidad de trabajar de forma mucho mas activa con resque, una herramienta super util para poder realizar y monitorear trabajos en background. Resque es un proyecto creado por la gente de github y que obviamente es utilizado por ellos. Esta herramienta esta hecha en ruby y pueden encontrar el codigo fuente en la siguiente direccion:
+https://github.com/defunkt/resque 
+
+Esta entrada tiene como finalidad mostrar un poco el uso de resque mediante un ejemplo, y no en detalles como comparandolo con otras herramientas o descripciones de funcionalidades especificas.
+
+h2. Factorial y Fibonacci
+
+Cuando fui ayudante de una materia de programacion la mejor forma de explicar algo era usar los ejemplos basicos, en este caso vamos a arrancar con un ejemplo sencillo:
+Vamos a crear un script que basicamente de un numero calcule el factorial y la funcion Fibonacci.
+Nuestro script luciria mas o menos asi:
+
+bc.
+def fib(n)
+  return n if n < 2
+  vals = [0, 1]
+  (n-1).times do
+    puts "check: #{vals[-1]}  #{vals[-2]}"
+    vals.push(vals[-1] + vals[-2])
+  end
+  return vals.last
+end
+
+Veamos como se ve... 
